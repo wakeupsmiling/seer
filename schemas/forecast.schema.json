@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seer.genesistheory.org/schemas/forecast.schema.json",
+  "title": "Seer Forecast (Lock C)",
+  "description": "The prediction itself. Captures the forecast statement, scenarios, confidence with provenance, falsification criteria, monitoring triggers, and baseline contrast. This is Lock C — the final immutable prediction.",
+  "type": "object",
+  "required": [
+    "statement",
+    "scenarios",
+    "confidence_band",
+    "confidence_provenance",
+    "falsification_criteria",
+    "baseline_contrast"
+  ],
+  "properties": {
+    "statement": {
+      "type": "string",
+      "description": "The forecast in plain language. Must be specific enough to score. E.g., 'Tesla will lose global EV market share leadership to BYD within 18 months, driven by structural bottleneck in R-channel (regulatory relationships) and field-level misfit in non-US markets.'",
+      "minLength": 1
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["label", "description", "probability"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Scenario name. E.g., 'Base case', 'Accelerated decline', 'Stabilization'."
+          },
+          "description": {
+            "type": "string",
+            "description": "What this scenario looks like. Specific enough to distinguish from other scenarios at resolution."
+          },
+          "probability": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Assigned probability. All scenario probabilities must sum to 1.0."
+          },
+          "structural_driver": {
+            "type": "string",
+            "description": "The Genesis mechanism driving this scenario. E.g., 'R-channel bottleneck deepens under regulatory pressure' or 'Navigator correction (lambda recovery) stabilizes margin trajectory'."
+          }
+        }
+      }
+    },
+    "confidence_band": {
+      "type": "string",
+      "description": "Overall confidence in the primary forecast. E.g., '60-70%' or 'Moderate (55-65%)'."
+    },
+    "confidence_provenance": {
+      "type": "object",
+      "required": ["evidence_strength", "structural_clarity", "proxy_dependence", "shock_sensitivity"],
+      "properties": {
+        "evidence_strength": {
+          "type": "string",
+          "description": "How strong is the evidence base? Pushes confidence up or down."
+        },
+        "structural_clarity": {
+          "type": "string",
+          "description": "How clear is the structural diagnosis? Is the bottleneck unambiguous?"
+        },
+        "proxy_dependence": {
+          "type": "string",
+          "description": "How much does the forecast rely on proxy evidence? Higher proxy dependence widens uncertainty."
+        },
+        "shock_sensitivity": {
+          "type": "string",
+          "description": "How vulnerable is this forecast to exogenous shocks?"
+        },
+        "challenge_impact": {
+          "type": "string",
+          "description": "What challenges were raised during the diagnostic, and how did they affect confidence?"
+        }
+      }
+    },
+    "falsification_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "Specific observable outcomes that would prove the forecast wrong. These are the scientific backbone — without them, the forecast isn't falsifiable."
+    },
+    "monitoring_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Events or signals that should prompt a check-in or status update on a live forecast."
+    },
+    "baseline_contrast": {
+      "type": "object",
+      "required": ["consensus", "divergence", "hinge"],
+      "properties": {
+        "consensus": {
+          "type": "string",
+          "description": "What the consensus/baseline predicts."
+        },
+        "divergence": {
+          "type": "string",
+          "description": "Where Seer disagrees with the baseline and why."
+        },
+        "hinge": {
+          "type": "string",
+          "description": "The specific structural factor that will determine who is right — Seer or the baseline."
+        }
+      }
+    },
+    "diagnostic_summary": {
+      "type": "object",
+      "properties": {
+        "bottleneck_channel": {
+          "type": "string",
+          "description": "The SIRF channel constraining capacity. E.g., 'R (Relational)'."
+        },
+        "regime": {
+          "type": "string",
+          "description": "Current work mode / deferral regime. E.g., 'Resistance (D_r) — defending current configuration'."
+        },
+        "margin_posture": {
+          "type": "string",
+          "description": "Margin trajectory assessment. E.g., 'dM/dt < 0, volitional window narrowing'."
+        },
+        "field_fit": {
+          "type": "string",
+          "description": "Channel-specific field-fit assessment. E.g., 'chi_S high, chi_R low in EU regulatory field'."
+        },
+        "navigation_profile": {
+          "type": "string",
+          "description": "Navigator classification. E.g., 'Visionary quadrant — high m, low lambda'."
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

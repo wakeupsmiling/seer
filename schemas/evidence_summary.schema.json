@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seer.genesistheory.org/schemas/evidence_summary.schema.json",
+  "title": "Seer Evidence Summary (Lock B)",
+  "description": "The evidence basis for diagnosis and prediction. Captures key findings, sources, coverage assessment, critical gaps, and proxy evidence. This is Lock B — the diagnostic cannot introduce claims beyond what is locked here.",
+  "type": "object",
+  "required": [
+    "key_findings",
+    "sources",
+    "coverage_band",
+    "critical_gaps",
+    "go_no_go"
+  ],
+  "properties": {
+    "key_findings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "The most important findings from the research phase. Each finding should be a specific, sourced claim — not a summary or impression."
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source", "confidence", "signal_type"],
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Source identifier. E.g., 'Tesla 10-K FY2025', 'Bloomberg consensus March 2026'."
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "moderate", "low"],
+            "description": "Confidence in the source's reliability and relevance."
+          },
+          "signal_type": {
+            "type": "string",
+            "enum": ["primary", "secondary", "proxy"],
+            "description": "Primary: direct observation or official data. Secondary: analysis or reporting on primary data. Proxy: indirect evidence requiring transfer assumptions."
+          }
+        }
+      }
+    },
+    "coverage_band": {
+      "type": "string",
+      "enum": ["comprehensive", "adequate", "partial", "sparse"],
+      "description": "How much of the system's SIRF channels are covered by available evidence."
+    },
+    "critical_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "What the evidence doesn't cover. Honest gap inventory. Each gap should specify which channel or dynamic is unobserved."
+    },
+    "proxy_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "description", "transfer_conditions"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Category of proxy. E.g., 'analogous system', 'adjacent metric', 'lagged indicator'."
+          },
+          "description": {
+            "type": "string",
+            "description": "What the proxy evidence is and where it comes from."
+          },
+          "transfer_conditions": {
+            "type": "string",
+            "description": "Under what conditions this proxy transfers to the target system. What would break the transfer."
+          }
+        }
+      },
+      "description": "Indirect evidence used when direct observation is unavailable. Must declare transfer conditions."
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Evidence items that contradict each other or the emerging diagnosis. Surfacing these is a feature, not a bug."
+    },
+    "go_no_go": {
+      "type": "object",
+      "required": ["decision", "rationale"],
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["go", "no_go", "go_with_caveats"],
+          "description": "Whether the evidence is sufficient to proceed to diagnosis."
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why the decision was made. If go_with_caveats, what the caveats are."
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

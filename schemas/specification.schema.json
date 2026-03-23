@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seer.genesistheory.org/schemas/specification.schema.json",
+  "title": "Seer Prediction Specification (Lock A)",
+  "description": "The forecastable object definition. Captures system, target, horizon, resolution criteria, and baseline before any analysis runs. This is Lock A — once hashed, nothing here changes.",
+  "type": "object",
+  "required": [
+    "system",
+    "object_type",
+    "target_class",
+    "target",
+    "horizon",
+    "resolution_criteria",
+    "baseline",
+    "shock_sensitivity",
+    "forecast_class",
+    "evidence_sufficiency",
+    "publication_class"
+  ],
+  "properties": {
+    "system": {
+      "type": "string",
+      "description": "The bounded organized system under analysis. Must pass the admissibility gate: bounded, organized, undergoing consequential change, with observable signals.",
+      "minLength": 1
+    },
+    "scope_notes": {
+      "type": "string",
+      "description": "Clarifications on system boundaries agreed during scope negotiation. E.g., 'Tesla the automaker, excluding Tesla Energy and SpaceX-adjacent ventures.'"
+    },
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "company",
+        "business_unit",
+        "market_sector",
+        "institution",
+        "nation_state",
+        "policy_regime",
+        "regional_urban",
+        "environmental_climate",
+        "technology_platform",
+        "cultural_movement",
+        "individual_actor"
+      ],
+      "description": "Classification of the system. Sets defaults for evidence sources, horizon suggestions, and monitoring logic."
+    },
+    "target_class": {
+      "type": "string",
+      "enum": [
+        "trajectory",
+        "sustainability",
+        "breakpoint",
+        "transition",
+        "comparison",
+        "conditional"
+      ],
+      "description": "The shape of the forecast question."
+    },
+    "target": {
+      "type": "string",
+      "description": "The specific forecast target statement. Must be precise enough to resolve. E.g., 'Tesla's market position relative to BYD in the global EV market over 18 months.'",
+      "minLength": 1
+    },
+    "horizon": {
+      "type": "object",
+      "required": ["length", "start_date", "end_date"],
+      "properties": {
+        "length": {
+          "type": "string",
+          "description": "Human-readable horizon length. E.g., '18 months', '3 years'."
+        },
+        "start_date": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO 8601 date. When the forecast window opens."
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO 8601 date. When the forecast resolves."
+        }
+      }
+    },
+    "resolution_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["criterion", "type", "weight"],
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "description": "What is being measured. E.g., 'Global EV market share relative to BYD'."
+          },
+          "type": {
+            "type": "string",
+            "enum": ["quantitative", "qualitative", "binary", "threshold"],
+            "description": "How this criterion resolves."
+          },
+          "threshold": {
+            "type": "string",
+            "description": "The specific threshold or condition for resolution. E.g., 'Tesla market share drops below BYD by >5 percentage points'."
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Component weight in the aggregate score. All weights must sum to 1.0."
+          }
+        }
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "required": ["source", "position", "divergence"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "The strongest-available conventional forecast Seer is competing against. E.g., 'Wall Street consensus (Bloomberg composite)'."
+        },
+        "position": {
+          "type": "string",
+          "description": "What the baseline predicts."
+        },
+        "divergence": {
+          "type": "string",
+          "description": "Where and why Seer's structural analysis diverges from the baseline."
+        },
+        "hinge": {
+          "type": "string",
+          "description": "The specific structural factor that explains the divergence. This is where Genesis earns its differential accuracy."
+        }
+      }
+    },
+    "shock_sensitivity": {
+      "type": "string",
+      "enum": ["low", "moderate", "high", "extreme"],
+      "description": "How vulnerable the forecast is to exogenous shocks that the structural analysis cannot anticipate."
+    },
+    "forecast_class": {
+      "type": "string",
+      "enum": ["standard", "speculative"],
+      "description": "Standard: evidence supports structural diagnosis. Speculative: sparse evidence, novel domain, or untested target class."
+    },
+    "evidence_sufficiency": {
+      "type": "string",
+      "enum": ["strong", "adequate", "sparse", "insufficient"],
+      "description": "Assessment of available evidence density at specification time."
+    },
+    "publication_class": {
+      "type": "string",
+      "enum": ["research_grade", "standard", "exploratory"],
+      "description": "Determines public weight and calibration treatment. Research-grade carries highest trust. Exploratory excluded from primary calibration."
+    },
+    "prediction_family": {
+      "type": "string",
+      "description": "If this forecast belongs to a family sharing a research pass, the family ID."
+    }
+  },
+  "additionalProperties": false
+}
