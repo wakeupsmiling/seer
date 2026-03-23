@@ -16,7 +16,7 @@ Every forecast in this registry is:
 
 | ID | System | Target | Horizon | Confidence | Baseline | Status | Score | Differential |
 |---|---|---|---|---|---|---|---|---|
-| *No forecasts yet* | | | | | | | | |
+| SEER-2026-0002 | Eastman Kodak (NYSE: EK) | Trajectory from peak through digital transformation | 1997–2011 (15 yr) | 55–65% | Wall Street / McKinsey / Christensen | **Scored** (retrodiction) | 0.9775 | **+0.8475** |
 
 ---
 
@@ -41,10 +41,11 @@ To verify a lock hasn't been tampered with:
 
 ```python
 import hashlib, json
-with open("forecasts/SEER-2026-0001.json") as f:
+with open("forecasts/SEER-2026-0002.json") as f:
     obj = json.load(f)
-content = json.dumps(obj["specification"], sort_keys=True, separators=(",", ":"))
-print(hashlib.sha256(content.encode()).hexdigest())
+content = json.dumps(obj["specification"], sort_keys=True,
+                     separators=(",", ":"), ensure_ascii=False)
+print(hashlib.sha256(content.encode("utf-8")).hexdigest())
 # Should match obj["specification_hash"]
 ```
 
