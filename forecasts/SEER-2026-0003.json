@@ -1,0 +1,265 @@
+{
+  "id": "SEER-2026-0003",
+  "created": "2026-03-23T23:54:16.272034+00:00",
+  "status": "locked",
+  "specification": {
+    "system": "Tesla Automotive Division (NYSE: TSLA) — vehicle design, manufacturing, sales, service, FSD/Autopilot software, and robotaxi operations. Excludes Energy/Storage segment (separate P&L, distinct field conditions, divergent trajectory). ~125,665 employees, ~$77B automotive revenue (2025), 1.64M deliveries (2025).",
+    "scope_notes": "Musk's cross-company leadership portfolio (SpaceX, xAI, X, Neuralink, Boring Company, DOGE) treated as organizational input to Tesla Automotive, not a separate system — but external activities assessed through Navigator Field-Emission Audit for field-level impact. Cybercab and Model Q included as automotive products. Energy/Storage excluded per segment separation.",
+    "object_type": "company",
+    "target_class": "trajectory",
+    "target": "Tesla Automotive's trajectory over 6 months (March–September 2026), focusing on whether the compound I-R bottleneck (I=2.0, R=2.5), frozen navigator correction rate (lambda ≈ 0), navigator field-emissions at civilizational scale, and delusion cascade (delta-Phi → I → R → F) produce continued erosion of conversion capacity, margin, and boundary portfolio — or whether an exogenous catalyst breaks the triple trap.",
+    "horizon": {
+      "length": "6 months",
+      "start_date": "2026-03-23",
+      "end_date": "2026-09-30"
+    },
+    "resolution_criteria": [
+      {
+        "criterion": "No strategic recalibration: leadership does not publicly acknowledge brand damage as structural or revise growth targets to match delivery trajectory",
+        "type": "qualitative",
+        "threshold": "No public acknowledgment with remedial action; no guidance aligned to actual trend; continued framing of Tesla as growth/AI company despite declining automotive deliveries",
+        "weight": 0.2
+      },
+      {
+        "criterion": "Third consecutive year of delivery decline — 2026 deliveries below 2025 level of 1.64M units",
+        "type": "threshold",
+        "threshold": "Full-year 2026 deliveries < 1.64M (resolution at year-end; H2 trajectory measurable by September from H1 actuals)",
+        "weight": 0.15
+      },
+      {
+        "criterion": "European market share falls below 7% in any quarter through September 2026, driven by civilizational-scale identity rejection",
+        "type": "threshold",
+        "threshold": "European EV registration share < 7% in any quarter through Q3 2026",
+        "weight": 0.15
+      },
+      {
+        "criterion": "No FSD Level 3+ approval in any US jurisdiction by end of 2026",
+        "type": "binary",
+        "threshold": "No state or federal approval for unsupervised autonomous driving by December 2026",
+        "weight": 0.1
+      },
+      {
+        "criterion": "Cybercab production remains below 25,000 units per quarter through 2026",
+        "type": "threshold",
+        "threshold": "No quarter exceeds 25K Cybercab units produced in 2026",
+        "weight": 0.1
+      },
+      {
+        "criterion": "Brand loyalty stays below 55% — no recovery from the 73% → 49.9% collapse",
+        "type": "threshold",
+        "threshold": "Brand repeat purchase rate remains below 55% through September 2026",
+        "weight": 0.15
+      },
+      {
+        "criterion": "Automotive gross margin (excluding regulatory credits) stays below 18%, confirming margin compression trajectory and R→F cascade propagation",
+        "type": "threshold",
+        "threshold": "No quarter exceeds 18% auto GM ex-credits through Q3 2026",
+        "weight": 0.15
+      }
+    ],
+    "baseline": {
+      "source": "Composite: Wall Street analyst consensus (Bloomberg composite), conventional strategy frameworks (McKinsey/BCG automotive transformation models), EV sector analyst consensus",
+      "position": "Consensus: Tesla faces headwinds but will adapt — pricing adjustments stabilize demand, Cybercab launch provides growth catalyst, brand damage is cyclical not structural, strong balance sheet ($44.1B cash) funds transformation. Most analysts rate Hold with expectation of eventual recovery. No consensus analyst predicts three consecutive years of delivery decline or structural brand fracture.",
+      "divergence": "Genesis predicts continued erosion (51% base) with significant downside risk (31%), driven by structural mechanisms invisible to consensus: (1) I-channel bottleneck prevents strategic recalibration — the system literally cannot see what's wrong; (2) brand damage is identity-based, not cyclical — progressive and European buyers have exited the consideration set entirely; (3) navigator field-emissions at civilizational scale (political alignment, nazi salute perception, X destruction, DOGE) created ~55-60% of R-field hostility with near-zero reversibility; (4) cash fortress delays but cannot prevent cascade propagation because F-channel strength doesn't repair I or R channels.",
+      "hinge": "The triple trap: I-channel model error (delta-Phi = 0.72) × boundary identity-closure (Pi contracted 43% in 2 years) × locked navigation (C_nav = 0.85 on wrong map, g = Dictate, lambda ≈ 0). If any element of the triple trap breaks — lambda unfreezes, boundaries reopen, or navigation diversifies — baselines may be closer to correct. If the triple trap holds, Genesis predicts outcomes no baseline framework can explain: a system with $44B cash and functional manufacturing that cannot execute any transformation requiring I-channel or R-channel health."
+    },
+    "shock_sensitivity": "high",
+    "forecast_class": "standard",
+    "evidence_sufficiency": "strong",
+    "publication_class": "research_grade"
+  },
+  "specification_hash": "35a1ee1c10cd7842c88cb1063380e2ef2b88850dd6be1f74f2119650a38bbd95",
+  "specification_locked_at": "2026-03-23T23:54:16.272222+00:00",
+  "evidence_summary": {
+    "key_findings": [
+      "I-channel scores 2.0 (Critical): all four I ≤ 2 conditions met. Narrative dominates data ('AI/robotics company' pivot while deliveries decline). Delta-Phi = 0.72 and widening. Truth-tellers marginalized (5 senior departures 2023-2024 including potential CEO successor Kirkhorn). Forecasts systematically wrong without correction: 9+ years of FSD misses, robotaxi 90% shortfall (promised 1,500, delivered ~135), promised 20-30% growth for 2025 but delivered -8.6%.",
+      "R-channel scores 2.5 (Strained-low), revised from 3.0 after Navigator Field-Emission Audit. Brand loyalty collapsed 73% → 49.9%. NBER peer-reviewed study quantified 1.0-1.26M lost sales from partisan effect. Democratic buyer share 40% → 15%. Europe sales -27.8% YoY (Germany -72% from peak). Trust recovery scores 1.0 — zero evidence of brand recovery initiatives.",
+      "F-channel scores 6.5 (Functional): $44.1B cash/investments (record), investment grade credit (BBB/Baa3). But automotive GM halved from 28.5% (2022) to 15.4% (2025). Operating margin compressed from 16.8% to 4.6%. Regulatory credits declining 28% ($1.99B) with projected 75% further decline by 2026. FCF projected negative 2026-2027 (JPMorgan, Goldman).",
+      "S-channel scores 4.5 (Strained): four major factories globally with $40.6B net PP&E, but only 3 named executives (Musk, Taneja, Zhu). CEO splits attention across 6 companies. 14%+ layoffs April 2024 (~19K employees). Eliminated entire Supercharger team and public policy division. Zero succession depth.",
+      "Compound bottleneck set B = {I, R} with gap of 0.5. These two channels form a reinforcing loop: low I prevents sensing R-channel damage → R continues degrading → degraded R generates negative signals → low I can't process them. Same navigator degrades both: frozen lambda locks I, while external conduct (political activity, X destruction, nazi salute perception) degrades R through field poisoning.",
+      "Navigator Field-Emission Audit identifies six emission channels at civilizational scale: (1) DOGE/political alignment, (2) nazi salute perception at inauguration, (3) X/Twitter destruction, (4) EU DSA proceedings creating cross-domain regulatory antagonism, (5) Sweden strike (29 months), (6) labor relations hostility. Navigator-attributed share of chi_R degradation: ~55-60%. Emissions compound multiplicatively on R-channel with near-zero reversibility.",
+      "Lambda ≈ 0.02 (frozen): five documented events with consistent pattern — disconfirming evidence triggers escalation, reframing, or silence, never recalibration. FSD timeline misses (2014-2025): new deadlines promised without correction. BYD overtaking: reframed as 'we're an AI company.' Brand loyalty -23pt: zero organizational response. DOGE Q1 net income -71%: escalated promises. Robotaxi 90% shortfall: 'agonizingly slow' qualifier.",
+      "Psi_norm = 0.010 (Terminal): robust to perturbation — even with generous simultaneous adjustments across I, A, eta, and chi(Phi), classification remains Terminal. Sensitivity analysis shows I must reach 4.0+ to escape, requiring lambda unfreeze for which no evidence exists.",
+      "Pi_avail contracted 43% in 2 years (from ~2.0M to ~1.14M addressable units). B002 (US progressive) identity-closed: Q10 = 3.0, Y(B) = 0.00. B003 (Europe) closing toward identity-closure: Q10 = 3.0, approaching same pattern. B008 (Canada) opens into hostile R-field pre-poisoned by DOGE/trade war association. Factory capacity 2.35M against accessible demand ~1.14M = 1.21M units of idle infrastructure.",
+      "Deferral classification: D_r (Resistance) — all six indicators confirmed. Response to disconfirmation: reject/rationalize. Exploration: suppressed. Margin: declining. Internal discourse: 'we're fine.' RUIN applied to accurate signals (Dojo abandoned, Supercharger team eliminated). Lambda: decreasing.",
+      "Three clocks diverge: navigator's estimate (T-hat) ≈ 5+ years (based on stated plans); conversion clock (T) ≈ 15 months (margin erosion closes volitional window); financial runway ≈ 30-36 months (cash exhaustion). Leadership reads the wrong clock — discovers volitional window closed after it's too late.",
+      "Delusion cascade active: Delta-Phi → I (degraded) → R (degrading) → F (early signals: GM halved, operating margin compressed, credits declining). Propagation velocity moderate. F→S link not yet fired — cash fortress delays structural impact. Without I-channel correction, F erosion projected to reach S in 2-3 years."
+    ],
+    "sources": [
+      {
+        "source": "Tesla 10-K, 10-Q SEC filings (2024-2025)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Tesla quarterly delivery reports and earnings calls",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "NBER working paper: partisan effect on Tesla sales (1.0-1.26M units lost)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "S&P Global Mobility / European registration data",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "NHTSA investigation records and recall database (5.14M recalls 2024)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Glassdoor (3.5/5) and Blind (3.3/5) employee sentiment data",
+        "confidence": "moderate",
+        "signal_type": "secondary"
+      },
+      {
+        "source": "Bloomberg analyst consensus and price targets",
+        "confidence": "high",
+        "signal_type": "secondary"
+      },
+      {
+        "source": "JPMorgan and Goldman Sachs automotive research (FCF projections)",
+        "confidence": "high",
+        "signal_type": "secondary"
+      },
+      {
+        "source": "BYD annual and quarterly production/sales reports",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Waymo safety data and operational reports",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Court records classifying CEO statements as 'corporate puffery'",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Brand loyalty tracking surveys (repeat purchase rate 73% → 49.9%)",
+        "confidence": "moderate",
+        "signal_type": "secondary"
+      },
+      {
+        "source": "EU DSA legal proceedings against X/Twitter",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Sweden strike coverage and sympathy action documentation",
+        "confidence": "high",
+        "signal_type": "primary"
+      }
+    ],
+    "coverage_band": "comprehensive",
+    "critical_gaps": [
+      "Internal board deliberations and strategic planning documents not available — assessment of navigation architecture relies on observable behavior, public statements, and SEC filings rather than private discussions",
+      "Automotive-only margin isolation is approximate — Tesla reports some metrics at company level, requiring estimation to separate automotive from Energy/Storage",
+      "Navigator field-emission counterfactual estimates (55-60% attribution to chi_R degradation) rely on cross-system comparison methodology, which is suggestive rather than definitive",
+      "Distributed navigation assessment based on public observations — internal cultural dynamics and actual decision-making processes may differ from external signals",
+      "Cybercab production readiness assessment relies on announced timelines and AI4 hardware status; internal manufacturing preparation data not available"
+    ],
+    "proxy_evidence": [
+      {
+        "type": "analogous system",
+        "description": "Navigator field-emission pattern: Uber (Kalanick 2017), WeWork (Neumann 2019), Twitter/X (Musk 2022-present) — founder-CEO external conduct degrading company operating field through political/cultural/institutional channels",
+        "transfer_conditions": "Transfers when: (1) CEO is founder or founder-equivalent with dominant control, (2) external conduct generates civilizational-scale media coverage, (3) company operates in consumer-facing market where brand trust affects purchase decisions. All conditions met. Would break if: Tesla buyer base were purely institutional/fleet (it isn't) or if CEO conduct were containable to personal brand (civilizational-scale emissions cross containment boundaries)."
+      },
+      {
+        "type": "adjacent metric",
+        "description": "Waymo safety record (244x human safety ratio) used as benchmark for FSD competitive gap. Waymo operates robotaxis commercially in multiple cities; Tesla FSD classified as Level 2 supervised.",
+        "transfer_conditions": "Transfers as competitive benchmark when both systems target autonomous driving market. Would break if: regulatory frameworks create separate approval pathways (possible but not yet visible) or if Tesla's approach (fleet learning) produces a discontinuous safety improvement (no evidence in 10+ years of development)."
+      }
+    ],
+    "contradictions": [
+      "C1 (HIGH): Tesla states it is 'fundamentally an AI/robotics company' while ~80% of revenue and majority of headcount remain automotive. The investment direction tilts toward the narrative (44% capex to AI) but operational reality remains automotive-dominant. A = 0.45.",
+      "C2 (HIGH): Tesla's financial health (F=6.5, $44.1B cash, investment grade) contradicts its conversion capacity (Psi_norm = 0.010, Terminal). The system is financially strong and transformationally impaired simultaneously — the 'capable but locked' pattern.",
+      "C3 (MEDIUM): Cybercab represents both Tesla's highest-potential new boundary and its most exposed risk. Launching with AI4 hardware (under NHTSA investigation) without AI5 (delayed to mid-2027), no steering wheel, into hostile regulatory field. Success would partially validate AI narrative; failure would accelerate investor repricing."
+    ],
+    "go_no_go": {
+      "decision": "go",
+      "rationale": "Evidence coverage is comprehensive across all four SIRF channels with Tier 1 financials (SEC filings), peer-reviewed academic research (NBER), public behavioral data, regulatory records, and competitive benchmarks. The diagnostic was subjected to Navigator Field-Emission Audit and disconfirming search. Psi_norm = 0.010 Terminal classification is robust to sensitivity perturbation. Source diversity is strong. Gaps are acknowledged but non-critical — the convergent pattern across multiple independent evidence sources is clear. Confidence ceiling: 0.80."
+    }
+  },
+  "evidence_hash": "0ae6b26a3456c223bf8a8ba917e50bfe7186746f33e77eb102644953b73ef254",
+  "evidence_locked_at": "2026-03-23T23:55:41.176420+00:00",
+  "forecast": {
+    "statement": "Tesla Automotive will continue eroding across conversion capacity, margin, and boundary portfolio through September 2026, driven by a triple trap: I-channel model error (delta-Phi = 0.72, lambda ≈ 0), structural boundary identity-closure (Pi contracted 43%), and locked navigation (C_nav = 0.85 on distorted map, g = Dictate). No strategic recalibration will occur because the navigation architecture structurally prevents correction. The delusion cascade (delta-Phi → I → R → F) will advance, with F-channel showing active margin compression by H2. The volitional clock (~15 months) will continue shortening while leadership reads the wrong clock (~5 years). Navigator field-emissions continue unabated, sustaining R-field hostility at civilizational scale.",
+    "scenarios": [
+      {
+        "label": "Base: Managed erosion",
+        "description": "Tesla continues on current trajectory. Automotive fundamentals erode while cash reserves and Energy segment mask the decline. No strategic recalibration (lambda remains frozen). AI/robotics narrative persists. Cybercab launches at low volume with AI4 hardware. Europe continues declining toward identity-closure. US market holds through loyalist base but doesn't grow. Navigator emissions continue unabated. Psi_norm: 0.010 → 0.008 by H2. M_r: 0.20 → 0.13 (crosses Adequate to Thin by H2). T: ~15 mo → ~8 mo. Pi_realized: ~495K → ~440K units/yr (-11%). Cascade advances one stage — F begins actively transmitting. Work mode: Maintain (transformation theater continues).",
+        "probability": 0.51,
+        "structural_driver": "Triple trap holds: I = 2.0 locked (lambda ≈ 0 prevents correction), R = 2.5 degrading (navigator emissions sustain field hostility), F eroding (margin compression transmits I/R damage into financials). No mechanism breaks the loop from inside — system can't see the trap because I-channel filters out the signals that would reveal it."
+      },
+      {
+        "label": "Downside: Accelerated contraction",
+        "description": "Multiple negative catalysts compound: BYD enters Canada and US-adjacent markets aggressively, European decline accelerates past -35% YoY as civilizational-scale identity rejection completes, regulatory enforcement tightens (NHTSA action on AI4, EU regulatory escalation from X/DSA), investor pseudo-active boundary breaks. Navigator emissions continue or intensify. Psi_norm: 0.010 → 0.006 by H2. M_r: 0.20 → 0.07 (approaching Locked). T: ~15 mo → ~4 mo (volitional window closing). Pi_realized: ~495K → ~360K (-27%). Cascade advances two stages — F actively degrading, S showing early signals.",
+        "probability": 0.31,
+        "structural_driver": "Same triple trap as Base but with exogenous accelerants compressing timeline. R declines to 2.0 (identity-closure completing in Europe). F under active pressure (margins approach breakeven, regulatory credits gone). Investor pseudo-active boundary breaks (>50% stock decline triggers repricing cascade). By H2, system approaches Maintain → Survive transition."
+      },
+      {
+        "label": "Discontinuity: Forced restructuring",
+        "description": "The triple trap collapses through external force — not gradual erosion but regime break. Possible triggers: forced leadership transition (board action or shareholder revolt), forced segment separation (automotive carved from AI/robotics), regulatory forced stop (NHTSA orders FSD ban or Cybercab halt), or market repricing cascade (>50% stock decline). Not bankruptcy — cash prevents that. But configuration breaks. Psi_norm bimodal: 0.004 (destructive) to 0.013 (corrective, if new leadership unfreezes lambda). M_r: 0.03-0.09 (Locked to Thin). Navigation shifts from Dictate to Contested.",
+        "probability": 0.15,
+        "structural_driver": "Six discontinuity triggers all fired (Psi_norm < 0.30, chi(Phi) < 0.4, Dual-Trap posture, overextension flagged, active cascade, pseudo-active > 30% Pi). System structurally vulnerable to any sufficiently large shock because I, R, and navigation provide zero resilience buffer. Even corrective discontinuity faces years of field reconstitution — civilizational-scale identity rejection doesn't heal on corporate timelines."
+      },
+      {
+        "label": "Upside: Correction catalyst",
+        "description": "An exogenous event forces strategic recalibration: Musk withdraws from political activity, board governance change introduces navigational diversity, or financial shock forces honest strategic assessment. Lambda must increase sustainably. Even then, accumulated field damage (chi_R = 0.15, near-zero reversibility on civilizational-scale emissions) persists for years. Produces trajectory reversal, not recovery. Psi_norm: 0.010 → 0.018-0.030 by H2 (still Terminal but trajectory reverses). B002 identity-closure permanent regardless.",
+        "probability": 0.03,
+        "structural_driver": "Requires lambda unfreeze — but lambda × chi(Phi) = 0.02 × 0.32 = 0.0064, meaning the system has near-zero capacity to exploit positive surprises. Even positive field shifts get partially cancelled by ongoing navigator emissions unless navigator changes first. The 3% floor acknowledges exogenous shocks beyond system control."
+      }
+    ],
+    "confidence_band": "40-51% (H1 confidence 0.40, H2 confidence 0.28 — hostile field + Dual-Trap posture means information decays rapidly)",
+    "confidence_provenance": {
+      "evidence_strength": "Strong. SEC filings provide Tier 1 financial data. NBER peer-reviewed study quantifies partisan brand effect. NHTSA records document regulatory trajectory. BYD/Waymo provide hard competitive benchmarks. Five documented lambda events with consistent pattern. Confidence ceiling: 0.80.",
+      "structural_clarity": "High. I-channel bottleneck unambiguous — all four I ≤ 2 conditions met. Compound bottleneck {I, R} confirmed with gap = 0.5. Psi_norm = 0.010 Terminal classification robust to simultaneous generous perturbations. Triple-trap architecture clearly identified with closed causal loop.",
+      "proxy_dependence": "Low. Minimal proxy evidence required — direct financials, market data, regulatory records, and behavioral evidence provide primary basis. Navigator field-emission counterfactual (55-60% attribution) uses cross-system comparison — suggestive, not definitive. Main proxy: Uber/WeWork analogy for CEO field-emission pattern.",
+      "shock_sensitivity": "High. chi(Phi) = 0.32 (hostile field) means rapid information decay. Six discontinuity triggers already fired. System is structurally vulnerable to both positive and negative shocks — but capacity to exploit positive shocks near-zero (lambda × chi = 0.0064) while capacity to absorb negative shocks limited by I = 2.0 and R = 2.5.",
+      "challenge_impact": "Strongest challenge: Tesla's cash fortress ($44.1B) and Energy segment growth could sustain operations beyond projected erosion timeline. Response: financial runway (~30-36 months) exceeds conversion clock (~15 months). Cash sustains operations but doesn't repair I or R. The system will lose its ability to choose transformation before it loses its ability to operate. Second challenge: Cybercab could exceed production expectations. Response: even at 25K/quarter, Cybercab operates with AI4 hardware under NHTSA investigation — regulatory risk caps upside."
+    },
+    "falsification_criteria": [
+      "Tesla publicly acknowledges brand damage as structural and announces specific remedial actions (brand recovery campaign, messaging pivot, political de-escalation) by September 2026",
+      "2026 deliveries exceed 1.64M units (would falsify third-consecutive-decline prediction)",
+      "European EV market share holds above 8% in every quarter through Q3 2026 (would falsify civilizational-scale identity rejection thesis)",
+      "FSD receives Level 3+ approval in any US jurisdiction by December 2026 (would falsify regulatory gating prediction)",
+      "Cybercab production exceeds 25,000 units in any quarter of 2026 (would falsify production ramp constraint)",
+      "Brand loyalty recovers above 55% by September 2026 (would falsify identity-based closure mechanism)",
+      "Automotive GM ex-credits exceeds 18% in any quarter through Q3 2026 (would falsify R→F cascade propagation)",
+      "Lambda shows evidence of unfreezing: observable model updating in response to disconfirming evidence (revised guidance, acknowledged competitive reality, strategic recalibration) sustained over 3+ months"
+    ],
+    "monitoring_triggers": [
+      "Q1 2026 delivery report (April 2026) — below 350K triggers tripwire adjustments",
+      "Cybercab production start (April 2026 target) — delay past May triggers B18 adjustment",
+      "NHTSA enforcement action on AI4/Cybercab",
+      "European quarterly registration data — below 5% in any quarter triggers B05 adjustment",
+      "Stock decline > 30% in 30 days (investor pseudo-active boundary stress)",
+      "Musk political withdrawal sustained > 3 months (navigator emission reduction signal)",
+      "Board governance change announcement",
+      "M_r band crossing below 0.15 (Adequate → Thin)",
+      "Auto operating margin below 2% for full quarter (cascade F confirmation)",
+      "New navigator field-emission event at civilizational scale"
+    ],
+    "baseline_contrast": {
+      "consensus": "Wall Street consensus: Hold. Tesla faces headwinds but adapts — pricing stabilizes demand, Cybercab provides catalyst, brand damage cyclical, cash enables transformation. No analyst consensus predicts three consecutive delivery decline years or structural brand fracture. P/E ~300 at declining deliveries implies market prices narrative success.",
+      "divergence": "Genesis predicts continued erosion (82% combined Base+Downside) vs. consensus expectation of stabilization/recovery. Four specific divergences: (1) no strategic recalibration possible (lambda ≈ 0 structurally prevents it — not unwillingness, inability); (2) brand damage is identity-based with near-zero reversibility at civilizational scale; (3) each successive pivot will fail because I-channel can't accurately assess the competitive landscape it pivots into; (4) volitional window (~15 months) closes well before financial runway (~30-36 months), but leadership reads the wrong clock.",
+      "hinge": "The most differentiating prediction: no strategic recalibration by September 2026 (85% confidence). Every conventional analyst expects some form of adaptation. Genesis predicts Tesla structurally cannot adapt because the navigation architecture (lambda ≈ 0, g = Dictate, C_nav = 0.85 locked on wrong map) prevents correction. If Tesla recalibrates, the triple-trap model is wrong. If Tesla doesn't, Genesis explained something no baseline framework could."
+    },
+    "diagnostic_summary": {
+      "bottleneck_channel": "I (Informational) at 2.0 — Critical. Compound set {I, R} with R at 2.5 (gap = 0.5). Same navigator degrades both: frozen lambda locks I, external conduct poisons R.",
+      "regime": "Deferral-resistance (D_r) — all six indicators confirmed. System spending margin to defend current configuration rather than building toward transformation. Exit trajectory: forced failure approaching (T ≈ 15 months).",
+      "margin_posture": "M_r = 0.20 (Adequate), dM/dt eroding. Overextension flagged (rho > 0, sigma ≤ 0). Confidence trap: delta-Phi_self = +0.35, navigator estimates 5+ years while actual T ≈ 15 months. Three clocks diverge: T-hat (5+ yr) vs T (15 mo) vs financial runway (30-36 mo).",
+      "field_fit": "chi(Phi) = 0.32 (Hostile). L2: chi_S = 0.48 (neutral), chi_I = 0.23 (hostile), chi_R = 0.15 (deep hostile, ~55-60% navigator-attributed), chi_F = 0.54 (neutral-supportive). Field-capacity resonance: field hostile on exactly the bottleneck channels.",
+      "navigation_profile": "Visionary quadrant — m = 0.75 (high imagination), lambda = 0.02 (frozen correction). beta = 0.15 (extreme model dominance). kappa_PhiPhi = -0.25 (extractive — navigator emissions degrade the field). C_nav = 0.85 (high convergence on wrong map). g = Dictate. Thriving condition: COLLAPSED."
+    }
+  },
+  "forecast_hash": "1d8cb091fda93d44449b6e1a3e0a86f3c41c54ea9f6e3d68006d4d9142eae1a0",
+  "forecast_locked_at": "2026-03-23T23:57:14.033582+00:00"
+}

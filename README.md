@@ -17,6 +17,7 @@ Every forecast in this registry is:
 | ID | System | Target | Horizon | Confidence | Baseline | Status | Score | Differential |
 |---|---|---|---|---|---|---|---|---|
 | SEER-2026-0002 | Eastman Kodak (NYSE: EK) | Trajectory from peak through digital transformation | 1997–2011 (15 yr) | 55–65% | Wall Street / McKinsey / Christensen | **Scored** (retrodiction) | 0.9775 | **+0.8475** |
+| SEER-2026-0003 | Tesla Automotive (TSLA) | Trajectory: triple trap (I×R×Navigation) erosion vs. catalyst | Mar–Sep 2026 (6 mo) | 40–51% | Wall Street / EV analyst consensus | **Locked** (live) | — | — |
 
 ---
 
