@@ -1,0 +1,312 @@
+{
+  "id": "SEER-2026-0004",
+  "created": "2026-04-16T22:53:35.009767+00:00",
+  "status": "scored",
+  "specification": {
+    "system": "WeWork Companies Inc. — co-working space operator, ~155-170 locations across 10 countries, ~130,000 members (May 2017), ~2,200 employees, ~$20B valuation (SoftBank Series G, August 2017)",
+    "scope_notes": "The privately held company including all owned/leased co-working locations, subsidiaries (WeLive), and technology acquisitions (FieldLens). Excludes SoftBank (external investor), landlords (counterparties), and member organizations (customers). Multi-cutoff retrodiction: T0 = August 2017 (prediction date), T1 = January 2019, T2 = August 2019. T0 evidence scrubbed to hard August 31, 2017 cutoff.",
+    "object_type": "company",
+    "target_class": "trajectory",
+    "target": "WeWork's trajectory from peak private valuation ($20B, August 2017) through attempted IPO to resolution, focusing on whether structural capacity constraints — specifically F-channel bottleneck (loss ≈ revenue, duration mismatch, single-source capital dependency) and threshold regime sensitivity — prevent sustainable operations despite massive capital infusion, and whether the navigator's response to disconfirming signals accelerates or mitigates decline.",
+    "horizon": {
+      "length": "6 years (multi-cutoff: T0 Aug 2017 → T1 Jan 2019 → T2 Aug 2019 → resolution Nov 2023)",
+      "start_date": "2017-08-31",
+      "end_date": "2023-11-06"
+    },
+    "resolution_criteria": [
+      {
+        "criterion": "No positive operating margin within 24 months without restructuring — the business model does not generate margin",
+        "type": "binary",
+        "threshold": "WeWork achieves positive operating margin before August 2019 without externally forced restructuring",
+        "weight": 0.15
+      },
+      {
+        "criterion": "Additional capital required within 24 months — system cannot self-fund",
+        "type": "binary",
+        "threshold": "WeWork accesses new capital sources (debt, equity, or follow-on investment) of >$500M within 24 months of T0",
+        "weight": 0.15
+      },
+      {
+        "criterion": "Enterprise boundary most resilient through correction — best unit economics survive",
+        "type": "qualitative",
+        "threshold": "Enterprise/large-company segment is preserved as core asset through any restructuring or value decline",
+        "weight": 0.1
+      },
+      {
+        "criterion": "No self-correction before forced external correction — navigator does not initiate preparation behavior",
+        "type": "binary",
+        "threshold": "Zero indicators of voluntary course correction (governance reform, cost discipline, strategic narrowing) before external pressure forces action",
+        "weight": 0.15
+      },
+      {
+        "criterion": "Lease duration mismatch becomes binding constraint in any downturn scenario",
+        "type": "qualitative",
+        "threshold": "Lease obligations identified as primary structural vulnerability in any crisis, restructuring, or bankruptcy",
+        "weight": 0.15
+      },
+      {
+        "criterion": "Disproportionate impact vs. IWG/Regus in any market correction — structural model difference produces asymmetric outcomes",
+        "type": "qualitative",
+        "threshold": "WeWork suffers materially worse outcomes than IWG during the same market period, attributable to structural model differences (pure sublease vs. revenue-share/franchise)",
+        "weight": 0.1
+      },
+      {
+        "criterion": "Margin reserve remains negative for 24 months — no scenario produces positive M_r",
+        "type": "threshold",
+        "threshold": "M_r < 0 at every reporting period through August 2019",
+        "weight": 0.1
+      },
+      {
+        "criterion": "Navigator rigidity increases on challenge — beta increases when disconfirming signals arrive",
+        "type": "qualitative",
+        "threshold": "First major disconfirming event produces narrative escalation rather than model update (lambda suppression)",
+        "weight": 0.1
+      }
+    ],
+    "baseline": {
+      "source": "Composite: SoftBank Vision Fund ($4.4B investment thesis: 'next Alibaba'), VC consensus (Series G at $20B validates growth trajectory), Goldman Sachs / JPMorgan (later IPO underwriters at $47B), co-working industry growth forecasts (JLL, CBRE)",
+      "position": "Consensus at T0 (August 2017): WeWork is a high-growth technology-enabled platform company. SoftBank's $4.4B validates the model. Revenue doubling annually. International expansion is the growth lever. Enterprise adoption accelerating. Path to profitability through scale and technology. $20B valuation is justified by growth rate and total addressable market.",
+      "divergence": "Genesis identifies Crisis (Ψ_norm = 0.21) when consensus sees triumph. Four specific divergences: (1) 2016 loss ≈ revenue (0.98:1 ratio) indicates no path to margin without restructuring; (2) duration mismatch (10-15yr leases vs. month-to-month revenue) creates threshold sensitivity to any demand shock; (3) single-source capital dependency (SoftBank) masks F-channel weakness; (4) navigator governance structure (supervoting) + simultaneous multi-front expansion while core economics are negative indicates deferral-resistance pattern.",
+      "hinge": "F-channel structural health: if the lease-sublease model can achieve positive unit economics at scale (as the bull case argues), consensus is vindicated. If the loss-to-revenue ratio is structural rather than growth-phase, Genesis is vindicated. The hinge is whether WeWork's losses are investment (temporary, scale-resolving) or architectural (permanent, requiring model change). At T0, this is genuinely uncertain — confidence ceiling 0.58."
+    },
+    "shock_sensitivity": "high",
+    "forecast_class": "standard",
+    "evidence_sufficiency": "adequate",
+    "publication_class": "research_grade"
+  },
+  "specification_hash": "0ab36cc2447dd49c268297b6cdb6ae32e45a462dea9947f9ef1838516495bd75",
+  "specification_locked_at": "2026-04-16T22:53:35.009919+00:00",
+  "evidence_summary": {
+    "key_findings": [
+      "2016 full-year financials: revenue $436M, net loss $429M. Loss-to-revenue ratio 0.98:1 — the company loses nearly as much as it earns. No self-sustaining economics visible at T0. (E001)",
+      "WeWork's business model creates a structural duration mismatch: 10-15 year lease commitments vs. month-to-month member revenue. In any demand downturn, WeWork absorbs full vacancy loss while landlords receive contracted rent. (E005, E006, E012)",
+      "SoftBank Vision Fund invested $4.4B in August 2017 — the second-largest private investment in a U.S. startup ever. This represents the vast majority of WeWork's growth capital, creating single-source capital dependency. No other investor has committed at remotely comparable scale. (E007, E009)",
+      "WeWork doubled its global presence in 2016, adding 18 cities across 6 countries. ~155-170 locations across 10 countries by mid-2017, ~130,000 members. Growth is rapid but capital-intensive replication, not structural innovation. (E002, E004, E016)",
+      "$20B valuation (Series G) implies technology-company multiples, but technology evidence is thin: FieldLens acquisition (construction communication platform, tangential to core) and unsubstantiated 'Google Analytics of space' claims. No disclosed technology revenue, proprietary platform, or data moat. (E017, E018, E019)",
+      "Aggregate lease obligations estimated at $5-15B (rough, based on ~170 locations at $2-5M annual cost). No precise figure publicly available at T0 — the wide range reflects genuine uncertainty. Each new location adds to obligations without evidence of improving the loss ratio. (E013)",
+      "Navigator (Adam Neumann) holds supervoting shares giving majority control with minority economic stake. Combined with the 12-minute due diligence story (SoftBank), this creates a governance structure where capital allocation decisions are concentrated in a single individual with limited external checks. (E027, E028, E008)",
+      "Enterprise client adoption growing: Microsoft partnership (Nov 2016), Fortune 500 interest reported. This is the strongest bull-case signal — enterprise contracts are stickier, higher-value, and potentially improve unit economics. But exact enterprise share and margins are unknown at T0. (E010, E011)",
+      "International expansion simultaneous across China ($500M committed), India (first location Jun 2017), and Southeast Asia — multiple new fronts opened while core economics are negative. Each new market adds lease obligations and operational complexity. (E014, E015, E016)",
+      "IWG/Regus comparison: 3,300+ locations across 120 countries, publicly traded, profitable. IWG uses revenue-share and franchise models alongside pure leases, creating a structurally different risk profile. WeWork's pure sublease model concentrates downside risk. (E020)",
+      "Lambda events at T0 are all positive (λ1-λ4): rapid membership growth, SoftBank validation, Microsoft partnership, international expansion. No disconfirming signals have arrived yet to test the navigator's evidence responsiveness. Lambda assessment is genuinely uncertain (0.25 ±0.15). (λ1-λ4)",
+      "Steel-man bull case at T0 is defensible: WeWork is 7 years old and doubling annually; IWG took 20+ years to reach profitability; enterprise adoption could change unit economics; the flex-work macro trend is real; SoftBank's $4.4B buys 24+ months of runway. None of these arguments are falsified by T0 evidence."
+    ],
+    "sources": [
+      {
+        "source": "WeWork 2016 full-year financial results (disclosed to investors)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "SoftBank Vision Fund investment announcement and terms (August 2017)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "WeWork press releases and corporate announcements (2016-2017)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Industry reporting: Forbes, Bloomberg, WSJ coverage of WeWork growth metrics (pre-August 2017)",
+        "confidence": "moderate",
+        "signal_type": "secondary"
+      },
+      {
+        "source": "IWG/Regus public filings and analyst coverage (structural comparison)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "Microsoft partnership announcement (November 2016)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "WeWork China / SoftBank-Hony Capital $500M commitment (July 2017)",
+        "confidence": "high",
+        "signal_type": "primary"
+      },
+      {
+        "source": "FieldLens acquisition reporting (June 2017)",
+        "confidence": "moderate",
+        "signal_type": "secondary"
+      },
+      {
+        "source": "VC/startup press on SoftBank due diligence process (12-minute tour, iPad sketch)",
+        "confidence": "moderate",
+        "signal_type": "secondary"
+      }
+    ],
+    "coverage_band": "adequate",
+    "critical_gaps": [
+      "No H1 2017 financials publicly available — 2016 is the most recent data point. Burn rate trajectory and any margin improvement are invisible.",
+      "No occupancy data available at T0. The lease duration mismatch could be manageable at high occupancy — cannot test this.",
+      "No per-location or per-desk unit economics data. Whether mature locations are profitable is unknown.",
+      "Enterprise revenue share and enterprise-specific margins not disclosed. The bull case for enterprise improving unit economics cannot be confirmed or falsified.",
+      "Aggregate lease obligations are estimated ($5-15B range), not observed. The first hard number ($18.2B) doesn't appear until the April 2018 bond offering.",
+      "Internal culture and navigator decision-making process not observable. Assessment of governance risk relies on structural indicators (supervoting) rather than behavioral evidence.",
+      "No disconfirming signals have arrived at T0 — lambda is untested. Cannot distinguish between a navigator who will update on bad news and one who will double down."
+    ],
+    "proxy_evidence": [
+      {
+        "type": "analogous system",
+        "description": "IWG/Regus: 3,300+ locations, 120 countries, profitable — demonstrates that co-working can be a viable business at scale, but with a fundamentally different structural model (revenue-share, franchise, diversified landlord relationships vs. pure sublease concentration).",
+        "transfer_conditions": "Transfers for market viability assessment (co-working demand is real). Does NOT transfer for unit economics comparison — WeWork's pure sublease model creates a different risk profile. Would break if WeWork has undisclosed structural advantages (technology, enterprise lock-in) that IWG lacks."
+      }
+    ],
+    "contradictions": [
+      "C1 (HIGH): Technology company vs. real estate company. $20B valuation implies tech multiples, but revenue comes from subleasing physical space. Technology claims (FieldLens, sensors, 'space analytics') are aspirational, not revenue-generating. This contradiction drives the valuation assessment.",
+      "C2 (MEDIUM): Rapid growth vs. negative unit economics. Revenue doubled in 2016 but losses kept pace (0.98:1). Growth could be investment-phase spending (bull case) or structural loss amplification (bear case). At T0, genuinely ambiguous.",
+      "C3 (MEDIUM): SoftBank validation vs. SoftBank due diligence. The largest private investment validates the model, but the 12-minute tour and iPad sketch suggest the validation process was shallow. Both facts are true — the question is which one is load-bearing for the trajectory."
+    ],
+    "go_no_go": {
+      "decision": "go_with_caveats",
+      "rationale": "Evidence covers all four SIRF channels with 29 catalogued claims (E001-E029), 3 contradictions, and 4 lambda events. Coverage is adequate for structural diagnosis but quantitatively thin — no H1 2017 financials, no occupancy data, no per-desk economics, no precise lease obligations. The private company opacity is the primary limitation. Go with caveats: confidence ceiling set at 0.58 (adequate coverage band), all downstream scores and bets must honor this ceiling, and the bull case must be stated as an advocate would argue it (not strawmanned)."
+    }
+  },
+  "evidence_hash": "e7200a8cf03a3aed99fad6fe6324f465dcec175d34f20168785cafe9659315ae",
+  "evidence_locked_at": "2026-04-16T22:53:37.982240+00:00",
+  "forecast": {
+    "statement": "WeWork is in structural Crisis (Ψ_norm = 0.21, Critical band) masked by SoftBank's $4.4B capital infusion. The F-channel bottleneck (loss ≈ revenue, duration mismatch, single-source capital dependency) will prevent positive margin within 24 months. The lease-sublease model creates threshold sensitivity to any demand or capital shock. No self-correction will occur before external forces compel it — the navigator's governance structure (supervoting) and simultaneous multi-front expansion while core economics are negative indicate deferral-resistance. When the first major disconfirming signal arrives, the navigator will respond with narrative escalation rather than model update. Enterprise is the most resilient boundary and will survive any correction as the core asset.",
+    "scenarios": [
+      {
+        "label": "Base: Capital-masked expansion continues",
+        "description": "SoftBank capital sustains growth. Revenue grows substantially from $436M (2016). Losses grow proportionally or faster — loss-to-revenue ratio stable or worsening. Lease obligations accumulate. No profitability inflection. System appears to thrive while structural position deteriorates. Ψ_norm declines 0.21 → 0.19 (H1) → 0.17 (H2). Additional capital required within 24 months. No self-correction initiated.",
+        "probability": 0.5,
+        "structural_driver": "F-channel bottleneck persists. Deferral-resistance (D_r) funded by SoftBank capital. Each new location adds lease obligations without improving unit economics. The threshold regime holds as long as the capital field (cheap money, willing investors) holds. Structural position erodes quietly beneath growth metrics."
+      },
+      {
+        "label": "Upside: Enterprise pivot begins to materialize",
+        "description": "Enterprise share grows meaningfully. Mature locations show improving contribution margins. SoftBank partnership delivers strategic value beyond capital. WeWork demonstrates early signs of a path to unit-level improvement. Ψ_norm stabilizes at 0.21-0.23. Still not profitable, but trajectory shifts.",
+        "probability": 0.2,
+        "structural_driver": "Enterprise contracts are stickier, higher-value, and potentially improve unit economics. Scale effects in mature locations begin to offset new-location losses. Requires enterprise margins demonstrably higher than SMB AND scale effects visible AND international expansion not draining capital at current rate. None falsified at T0, but none evidenced either."
+      },
+      {
+        "label": "Downside: Capital markets tighten",
+        "description": "Interest rates rise. VC market cools. SoftBank faces Vision Fund internal pressure and delays or reduces follow-on commitment. WeWork forced to access debt markets at unfavorable terms. Burn rate unchanged but capital pipeline narrows. Ψ_norm declines to 0.17 (H1) → 0.12 (H2). Volitional clock compresses to 14-24 months.",
+        "probability": 0.2,
+        "structural_driver": "External field shifts against WeWork. The threshold regime becomes binding — not a crisis yet, but a cooling is enough to strain a system with no margin buffer. F-channel weakness exposed when capital access tightens. chi_F declines from 0.30 toward 0.22."
+      },
+      {
+        "label": "Discontinuity: Macro shock triggers lease model stress",
+        "description": "Recession or severe market correction. Member demand drops. Occupancy falls. WeWork trapped in estimated $5-15B+ of leases with declining revenue. SoftBank unable or unwilling to inject sufficient additional capital. Forced restructuring. Ψ_norm drops to 0.12 (H1) → <0.08 (H2). Foundation shock cascade entry.",
+        "probability": 0.1,
+        "structural_driver": "Mandatory tail scenario: M_r projected below 0.05 in base by H3. Demand shock → lease trap → capital crisis. Mechanism clear from T0 evidence; magnitudes uncertain because precise lease obligations unknown. Requires external trigger that T0 evidence doesn't predict."
+      }
+    ],
+    "confidence_band": "Low-moderate (50-58%). T0 decomposed confidence 0.14. Direction confidence high; magnitude and timing confidence low. All bets capped at 0.58 evidence ceiling.",
+    "confidence_provenance": {
+      "evidence_strength": "Adequate but quantitatively thin. 29 evidence claims across all four SIRF channels. 2016 financials provide the core F-channel signal. Private company opacity limits assessment — no H1 2017 financials, no occupancy data, no per-desk economics, no precise lease obligations. Coverage sufficient for structural diagnosis but insufficient for high-confidence quantitative predictions.",
+      "structural_clarity": "Moderate-high. F-channel bottleneck is clear: loss ≈ revenue with no visible improvement mechanism. Duration mismatch is architectural. But the severity is genuinely uncertain — the bull case (growth-phase losses, enterprise improvement, scale effects) cannot be falsified at T0. Effective bottleneck set {F, I} is identifiable but I-channel assessment hampered by private company opacity.",
+      "proxy_dependence": "Low-moderate. IWG comparison used for structural-model contrast, not load-bearing prediction. No proxy required for core F-channel diagnosis — WeWork's own 2016 financials provide direct observation. Proxy dependence increases for timing and magnitude estimates where T0 data is thin.",
+      "shock_sensitivity": "High. The threshold regime means external field shifts (rate hikes, capital market cooling, recession) could rapidly accelerate decline. Conversely, continued cheap capital extends the runway. The forecast is more sensitive to exogenous conditions than the Kodak retrodiction because the system depends on external capital rather than internal cash generation.",
+      "challenge_impact": "The strongest challenge is the steel-man bull case: WeWork is 7 years old and doubling; IWG took 20+ years to profitability; enterprise adoption is growing; flex-work is a genuine macro trend; $4.4B buys 24+ months of runway. This challenge is why the Upside scenario gets 0.20 probability (higher than the original's 0.15) and why the confidence ceiling is 0.58, not higher. The bull case is defensible at T0 — the signal is directional, not dispositive."
+    },
+    "falsification_criteria": [
+      "WeWork achieves positive operating margin before August 2019 without externally forced restructuring (would falsify BET-1 and BET-7)",
+      "WeWork funds operations for 24 months from T0 without accessing new capital sources >$500M (would falsify BET-2)",
+      "Navigator initiates voluntary governance reform, strategic narrowing, or cost discipline before any external pressure (would falsify BET-4)",
+      "Navigator responds to first major disconfirming signal with strategic reassessment rather than narrative escalation (would falsify BET-8)",
+      "WeWork's loss-to-revenue ratio improves to below 0.50 within 12 months (would undermine F-channel bottleneck diagnosis)",
+      "IWG suffers comparable or worse outcomes in the same market period (would falsify structural-model asymmetry prediction)"
+    ],
+    "monitoring_triggers": [
+      "H1 2017 financial results (when disclosed) — test whether loss-to-revenue ratio is improving or worsening from 2016's 0.98:1",
+      "Any SoftBank follow-on investment announcement or delay signals",
+      "Debt market access attempt (would confirm BET-2 and signal capital pipeline narrowing)",
+      "IPO filing or discussion (signals capital strategy evolution)",
+      "Navigator governance actions (any board changes, outside director appointments, or governance reform)",
+      "Macro indicators: Fed rate decisions, VC market cooling signals, recession indicators",
+      "Enterprise client concentration data (when available)",
+      "Competitor IWG strategic moves or financial results"
+    ],
+    "baseline_contrast": {
+      "consensus": "SoftBank: 'next Alibaba' at $20B, growth validates model. VC consensus: Series G validates trajectory. Industry forecasts: co-working to grow 20-30% annually through 2022. No major investor, analyst, or industry observer identifies Crisis at T0.",
+      "divergence": "Genesis identifies Crisis (Ψ_norm = 0.21) when every observable market signal says triumph. Four specific divergences: (1) loss ≈ revenue is structural, not growth-phase (no improvement mechanism visible); (2) duration mismatch creates threshold sensitivity invisible to growth metrics; (3) single-source capital dependency masks F-channel weakness; (4) supervoting governance + multi-front expansion while negative-margin indicates deferral-resistance. None of these are visible in revenue growth, member growth, or valuation metrics that drive consensus.",
+      "hinge": "Unit economics at scale. If WeWork's losses are investment (temporary, resolved by scale/enterprise mix), consensus is right and Genesis overcalls the risk. If losses are architectural (permanent, requiring model change), Genesis is right and SoftBank's $4.4B extends the runway without fixing the engine. At T0, this is genuinely uncertain — the hinge turns on data (occupancy, per-desk margins, enterprise unit economics) that is not publicly available."
+    },
+    "diagnostic_summary": {
+      "bottleneck_channel": "F (Foundation) at 3.0 — loss ≈ revenue, duration mismatch, single-source capital dependency. Effective bottleneck set: {F, I}.",
+      "regime": "Threshold regime. System functions only while external conditions hold (cheap capital, willing investors, growing demand). Deferral-resistance (D_r): navigator has margin to act but is resisting — expanding simultaneously on 5+ fronts while core economics are negative.",
+      "margin_posture": "M_r < 0.00. No margin buffer. System operates on external capital injection, not internally generated surplus. dM/dt weakly negative in Base (each new location adds obligations without improving ratio). Volitional clock T = 24-48 months (wide range reflects genuine T0 uncertainty).",
+      "field_fit": "chi(Phi) L1 = 0.44. chi_S: 0.60 (flex-work trend supportive). chi_I: 0.30 (no information advantage materializing). chi_R: 0.55 (relationships functional). chi_F: 0.30 (capital-dependent, field-sensitive). Delta-Phi_field: 0.55 — system deepening field dependency without gaining contrast.",
+      "navigation_profile": "Navigator profile uncertain at T0. High m (imagination) evidenced by expansion ambition and narrative. Lambda untested — no disconfirming signals have arrived. Beta (rigidity): structural indicators present (supervoting, multi-front expansion) but behavioral evidence absent. Honest assessment: the navigator might be visionary or delusional; T0 evidence cannot distinguish."
+    }
+  },
+  "forecast_hash": "e5f4cfbb44b12dd9746445814c4e70efa8c83c9597016da60187af8400beecb1",
+  "forecast_locked_at": "2026-04-16T22:53:40.770050+00:00",
+  "resolution": {
+    "resolved_at": "2026-04-16T22:53:40.770050+00:00",
+    "outcome_evidence": [
+      "S-1 filed August 14, 2019 revealing $47.2B lease obligations, $1.9B net loss (2018), community adjusted EBITDA, and extensive self-dealing (Neumann trademarks, related-party transactions, Gulfstream lease). Valuation collapsed from $47B to $15-20B within weeks.",
+      "IPO withdrawn September 17, 2019. Adam Neumann forced out as CEO September 24, 2019 — 41 days after S-1. Zero voluntary preparation or self-correction preceded the forced exit.",
+      "SoftBank bailout October 2019: $7.5-8B rescue package. Total SoftBank investment ~$18.5B. SoftBank wrote down investment to near-zero. Confirmed single-source capital dependency and F-channel bottleneck.",
+      "2,400 layoffs November 2019. All diversification ventures shuttered (WeLive scaled back, WeGrow closed, Managed by Q sold, Rise by We closed). Non-core boundaries collapsed exactly as predicted.",
+      "WeWork listed via SPAC October 2021 at ~$9B valuation — pitched primarily on enterprise/large-company segment. Enterprise confirmed as the surviving core asset (BET-3).",
+      "Chapter 11 bankruptcy filed November 6, 2023. Listed >$18B in debt, dominated by lease obligations. The duration mismatch was the ultimate cause of death (BET-5).",
+      "IWG/Regus survived, thrived during COVID-era flexible work boom, valued at >$4B throughout. Structural model difference (revenue-share/franchise vs. pure sublease) produced exactly the predicted asymmetry (BET-6).",
+      "Navigator response to $16B deal collapse (Dec 2018): launched We Company rebrand and 'elevate the world's consciousness' mission (Jan 2019). Lambda approached zero. Beta increased. Narrative escalation on disconfirmation exactly as predicted (BET-8).",
+      "WeWork never achieved positive operating margin at any point from T0 (August 2017) through bankruptcy (November 2023). BET-1 and BET-7 confirmed across the entire timeline.",
+      "Capital accessed repeatedly after T0: $702M bond offering (April 2018), $2B SoftBank (January 2019), attempted $16B deal (failed December 2018), planned $4B pre-IPO debt + $6B credit facility. BET-2 confirmed within 8 months."
+    ],
+    "component_scores": [
+      {
+        "criterion": "No positive operating margin within 24 months without restructuring",
+        "outcome": "WeWork never achieved positive operating margin. H1 2019 loss ~$900M. No restructuring until externally forced (September 2019). Confirmed.",
+        "score": 1.0
+      },
+      {
+        "criterion": "Additional capital required within 24 months",
+        "outcome": "Multiple capital raises within 24 months: $702M bond (April 2018), attempted $16B SoftBank deal (failed December 2018), $2B SoftBank (January 2019). Capital dependency intensified, not resolved.",
+        "score": 1.0
+      },
+      {
+        "criterion": "Enterprise boundary most resilient through correction",
+        "outcome": "Enterprise was the surviving core. SoftBank bailout preserved enterprise business. 2021 SPAC pitched on enterprise/large-company segment. All other boundaries (WeLive, WeGrow, Rise by We, international excess) shut down.",
+        "score": 1.0
+      },
+      {
+        "criterion": "No self-correction before forced external correction",
+        "outcome": "Zero preparation behavior before S-1 forced correction. Governance changes (September 13, 2019) were reactive to market pressure. Neumann never initiated voluntary course correction.",
+        "score": 1.0
+      },
+      {
+        "criterion": "Lease duration mismatch becomes binding constraint in downturn",
+        "outcome": "$47.2B lease obligations (August 2019) became the anchor. Bankruptcy filing (November 2023) listed >$18B debt dominated by lease obligations. The structural mismatch was the ultimate cause of death.",
+        "score": 1.0
+      },
+      {
+        "criterion": "Disproportionate impact vs. IWG in downturn",
+        "outcome": "WeWork went bankrupt. IWG survived, thrived during COVID flexible-work boom, valued at >$4B. Structural model difference (pure sublease vs. revenue-share/franchise) produced exactly the predicted asymmetry.",
+        "score": 1.0
+      },
+      {
+        "criterion": "Margin reserve remains negative for 24 months",
+        "outcome": "M_r never approached zero. Losses exceeded revenue at every reporting period through 2020 and beyond. M_r was negative for the entire company lifetime.",
+        "score": 1.0
+      },
+      {
+        "criterion": "Navigator rigidity increases on challenge",
+        "outcome": "The $16B deal collapse (December 2018) — the first major disconfirming signal — was immediately followed by We Company rebrand and 'elevate the world's consciousness' mission (January 2019). Lambda approached zero. Beta increased exactly as predicted.",
+        "score": 1.0
+      }
+    ],
+    "forecast_score": 1.0,
+    "brier_score": 0.136,
+    "log_score": 0.693,
+    "baseline_outcome": "SoftBank: invested $4.4B at T0 calling WeWork 'next Alibaba' — wrote down to near-zero, total losses ~$14B. Goldman Sachs/JPMorgan: underwrote IPO at $47B (T2) — IPO failed entirely, $6B credit facility collapsed. Fidelity: marked down to $18.3B at T1 — still 2.5× the eventual bailout value. Short sellers/skeptics: identified lease model concerns — correct direction but not quantified. No baseline framework identified Crisis at T0, predicted the navigator's response to disconfirmation, or forecast the specific structural cascade pathway.",
+    "calibration_notes": "This retrodiction demonstrates Genesis capabilities in a different mode than the Kodak case. Kodak was an I-channel bottleneck (strategic model error) with a long deferral horizon; WeWork is an F-channel bottleneck (economic model failure) with a threshold regime and short clock. Key calibration findings: (1) T0 direction was correct on all 8 bets at confidence 0.54 mean — under-confident relative to outcomes but appropriate given evidence quality. (2) T0→T1 Ψ decline was steeper with honest baselines (74% vs. 61% with contaminated T0), confirming the value of hard cutoff discipline. (3) T1/T2 bets produced mean Brier 0.042 with confidence 0.81 — sharp reads when evidence quality rises. (4) The 6-week IPO-to-ousting collapse was faster than any scenario projected — Genesis reads architecture better than velocity. (5) The honest T0 supports Crisis but NOT Terminal — the 'Terminal at T0' claim does not survive the evidence scrub. This is a real loss in claim strength but a gain in scientific credibility. Combined 15/15 correct across 15 bets; mean Brier 0.136. Retrodiction note: hindsight contamination mitigated by mandatory cutoff scrub (T0 v2), two-layer evidence packaging, steel-man bull case, and shared-evidence flagging. These protocol improvements were developed during this case and should be mandatory for all future cases.",
+    "differential_accuracy": 0.85
+  },
+  "retrodiction": {
+    "prediction_date": "2017-08-31",
+    "time_boxed": true,
+    "scorecard": {
+      "predicted": "Crisis (Ψ_norm = 0.21, Critical band): F-channel bottleneck (loss ≈ revenue, duration mismatch, single-source capital dependency). Threshold regime. No positive margin within 24 months. Additional capital required. No self-correction before forced correction. Navigator rigidity on challenge. Enterprise most resilient boundary. Lease mismatch becomes binding constraint. Disproportionate impact vs. IWG. Base scenario (0.50): capital-masked expansion continues with deepening structural vulnerability.",
+      "actual": "Crisis confirmed, deepening to Terminal by T1. S-1 (August 2019) revealed $47.2B lease obligations, $1.9B loss (2018), extensive self-dealing. IPO withdrawn 6 weeks later. Neumann forced out 41 days after S-1. SoftBank bailout $7.5-8B. All diversification shuttered. Enterprise survived as core (SPAC 2021). Bankruptcy November 2023. IWG thrived. Delusion cascade confirmed at T2: ΔΦ → I → R → F → S.",
+      "deviation": "The 6-week collapse from S-1 to CEO ouster was faster than any scenario projected. Timing remains the primary weakness — Genesis reads architecture better than velocity. The scrubbed T0 correctly identifies Crisis but not Terminal; Terminal becomes visible only at T1 with the $16B deal collapse and 2017 financial data. Pattern: directional accuracy high, magnitude accuracy moderate, timing accuracy low at T0; all three improve sharply at T1.",
+      "calibration": "T0 bets: 8/8 correct, mean confidence 0.54, mean Brier 0.217 — under-confident but appropriate given evidence quality. T1/T2 bets: 7/7 correct, mean confidence 0.81, mean Brier 0.042 — well-calibrated. Combined: 15/15 correct, mean Brier 0.136. Differential accuracy +0.85 confirms substantial value beyond all baseline approaches. Protocol improvements developed during this case: mandatory cutoff scrub, two-layer evidence packaging, steel-man bull case, shared-evidence flagging, confidence ceilings that bind. Pattern library entry: Visionary Trap — Capital-Masked Crisis (high m, untested lambda, single-source capital dependency, threshold regime, deferral-resistance)."
+    }
+  }
+}
