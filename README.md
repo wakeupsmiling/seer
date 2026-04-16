@@ -18,6 +18,7 @@ Every forecast in this registry is:
 |---|---|---|---|---|---|---|---|---|
 | SEER-2026-0002 | Eastman Kodak (NYSE: EK) | Trajectory from peak through digital transformation | 1997–2011 (15 yr) | 55–65% | Wall Street / McKinsey / Christensen | **Scored** (retrodiction) | 0.9775 | **+0.8475** |
 | SEER-2026-0003 | Tesla Automotive (TSLA) | Trajectory: triple trap (I×R×Navigation) erosion vs. catalyst | Mar–Sep 2026 (6 mo) | 40–51% | Wall Street / EV analyst consensus | **Locked** (live) | — | — |
+| SEER-2026-0004 | WeWork Companies Inc. | Trajectory from peak valuation ($20B) through IPO failure to bankruptcy | Aug 2017–Nov 2023 (6 yr) | 50–58% | SoftBank / Goldman / VC consensus | **Scored** (retrodiction) | 15/15 bets, Brier 0.136 | **+0.85** |
 
 ---
 
