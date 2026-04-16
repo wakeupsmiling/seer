@@ -92,4 +92,4 @@ seer-v0/
 
 ---
 
-*Seer is built and operated by Paul Campillo as part of the Genesis Theory research program.*
+*Seer is built and operated by Genesis Research Lab. More at genesistheory.org*
