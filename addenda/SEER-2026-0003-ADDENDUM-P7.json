@@ -1,0 +1,53 @@
+{
+  "id": "SEER-2026-0003-ADDENDUM-P7",
+  "parent_forecast": "SEER-2026-0003",
+  "artifact_type": "criterion_addendum",
+  "created": "2026-08-30T20:43:45.099150+00:00",
+  "registered_at": "2026-08-30T20:43:45.099150+00:00",
+  "provenance": {
+    "drafted_no_earlier_than": "2026-04-22",
+    "drafted_basis": "The April text cites the Tesla Q1 2026 earnings call transcript of April 22, 2026.",
+    "drafting_evidence": "none",
+    "drafting_evidence_detail": "No commit, no server-side revision record, and no reliable local timestamp establishes when the April text was written. The parent forecast SEER-2026-0003 locked 2026-03-23, which is eight days before Q1 2026 closed and a month before the earnings call the text cites; that lock is evidence about the parent, not about this addendum.",
+    "pre_registration_claim": false,
+    "post_hoc": true,
+    "post_hoc_scope": "Tesla reported Q2 2026 in July 2026, before this registration. The Q1 and Q2 portions of this addendum, including the counterfactual and the interpretation table's first row, are registered POST-HOC and carry no pre-registration credit. Only the Q3 decision rule below is locked ahead of its data."
+  },
+  "recorded_resolution": {
+    "criterion": "Automotive gross margin (excluding regulatory credits) stays below 18%, confirming margin compression trajectory and R→F cascade propagation",
+    "resolved": "FALSE",
+    "resolved_on_evidence_dated": "2026-04",
+    "observed": "Q1 2026 automotive gross margin excluding regulatory credits reported at 19.2%, above the 18.0% threshold. The locked criterion resolves FALSE on its first checkpoint.",
+    "component_score": 0.0,
+    "component_weight": 0.15,
+    "per_prediction_brier": 0.5625,
+    "scoring_conflict_unresolved": "SCORING_POLICY.md v1.0 defines Brier once per forecast, using the primary scenario probability against the weighted forecast score. The published Tesla forecast card instead describes a per-prediction Brier ('a prediction at 85% that resolves correctly scores 0.0225'). These two published documents specify different schemes. Both figures are recorded here. This addendum does not choose between them; the reconciliation is a scoring-policy decision, not a scoring result."
+  },
+  "q3_precommitment": {
+    "addendum_id": "SEER-2026-0003-ADDENDUM-P7",
+    "parent_forecast": "SEER-2026-0003",
+    "criterion": "Automotive gross margin (excluding regulatory credits) stays below 18%, confirming margin compression trajectory and R→F cascade propagation",
+    "criterion_weight": 0.15,
+    "observed_to_date": {
+      "Q1_2026_auto_gm_ex_credits_pct": 19.2,
+      "Q2_2026_auto_gm_ex_credits_pct": 16.3,
+      "source": "Tesla quarterly updates and 10-Q filings, automotive gross margin excluding regulatory credits, as reported."
+    },
+    "decision_rule": {
+      "statement": "The mechanism verdict on R->F cascade propagation is decided by the equal-weighted mean of Q1, Q2 and Q3 2026 automotive gross margin excluding regulatory credits, as Tesla reports them.",
+      "mean_threshold_pct": 18.0,
+      "implied_q3_threshold_pct": 18.5,
+      "if_q3_below_threshold": "Three-quarter mean falls below 18.0%. The R->F cascade propagation claim survives this test. Survival means this falsifier did not fire conceptually. It does not mean the claim is correct.",
+      "if_q3_at_or_above_threshold": "Three-quarter mean reaches or exceeds 18.0%. The R->F cascade propagation claim is substantially wrong and requires revision or replacement.",
+      "no_exclusions": "No quarter is excluded for one-time items. Reported figures only.",
+      "symmetry_commitment": "No downward adjustment will be applied to a Q3 print above the threshold, and no upward adjustment to one below it. Adjusted-margin analysis may be published alongside but does not enter this rule."
+    },
+    "expected_report_date": "2026-10",
+    "locked_before": "Tesla Q3 2026 results"
+  },
+  "q3_precommitment_hash": "7da7f101a9a31670329fc83506a2e33f648cae5c77431eb34ed7fccf23b74ca9",
+  "q3_precommitment_locked_at": "2026-08-30T20:43:45.099150+00:00",
+  "lineage": {
+    "predecessor": "SEER-2026-0003"
+  }
+}

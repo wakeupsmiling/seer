@@ -261,5 +261,21 @@
     }
   },
   "forecast_hash": "1d8cb091fda93d44449b6e1a3e0a86f3c41c54ea9f6e3d68006d4d9142eae1a0",
-  "forecast_locked_at": "2026-03-23T23:57:14.033582+00:00"
+  "forecast_locked_at": "2026-03-23T23:57:14.033582+00:00",
+  "monitoring": {
+    "notes": [
+      {
+        "timestamp": "2026-04-22T00:00:00+00:00",
+        "observation": "P7 falsifier triggered. Tesla reported Q1 2026 automotive gross margin excluding regulatory credits at 19.2%, above the 18.0% threshold. Criterion 7 resolves FALSE on its first checkpoint; the result stands regardless of Q2 or Q3 outcomes. Recorded retroactively on 2026-08-30 — this note was not written contemporaneously. See SEER-2026-0003-ADDENDUM-P7."
+      },
+      {
+        "timestamp": "2026-07-23T00:00:00+00:00",
+        "observation": "Q2 2026 automotive gross margin excluding regulatory credits reported at 16.3%, below the 18.0% threshold. Tesla's CFO attributed the sequential decline to two non-recurring Q1 benefits — a $230M warranty true-down and tariff relief — stating that controlling for them, auto gross margins excluding credits would have been approximately flat quarter over quarter. Recorded retroactively on 2026-08-30."
+      },
+      {
+        "timestamp": "2026-08-30T20:43:45.099150+00:00",
+        "observation": "Registration note. P7 resolved FALSE in April 2026 and went unrecorded in this object for four months. Seer v0's forecast object has no representation for a criterion that resolves before the forecast horizon: score.py writes a whole-forecast resolution and sets status to 'scored', and the schema's status enum has no partially-resolved state. The P7 result is therefore recorded here, in the mutable monitoring layer, rather than in 'resolution'. Monitoring is explicitly not part of any lock. Criteria 1-6 remain unresolved; status stays 'locked'."
+      }
+    ]
+  }
 }
