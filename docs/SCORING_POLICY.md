@@ -2,8 +2,8 @@
 
 *Published before the first forecast. Governs all scoring decisions.*
 
-**Version:** 1.0
-**Effective:** March 2026
+**Version:** 1.1
+**Effective:** March 2026 (v1.0) · 30 August 2026 (v1.1)
 **Status:** Active
 
 ---
@@ -148,6 +148,64 @@ This scoring policy can be amended, but:
 2. All prior forecasts are scored under the policy in effect at their Lock A time
 3. Amendments are published with rationale and effective date
 4. The amendment history is preserved in this document's version log
+
+---
+
+## Per-prediction Brier — added in v1.1
+
+For forecasts whose resolution criteria are stated as independent probabilistic claims — as in the
+Tesla forecast card's P1 through P7 — each criterion additionally receives:
+
+$$\text{Brier}_i = (p_i - o_i)^2$$
+
+where $p_i$ is the probability assigned to criterion $i$ and $o_i \in \{0, 1\}$ is its binary outcome.
+
+### Why this amendment exists
+
+v1.0 computes Brier once per forecast, from the primary scenario probability at Lock C. The public
+Tesla forecast card for SEER-2026-0003 instead described a per-prediction Brier and gave worked
+examples: *"A prediction at 85% that resolves correctly scores 0.0225. The same prediction resolving
+incorrectly scores 0.7225."* The two published documents specified different schemes. The divergence
+surfaced when P7 resolved FALSE and had to be recorded.
+
+### Precedence — governing rule
+
+This document controls. v1.0 states it directly in its closing line, and its amendment policy fixes
+each forecast's scoring to the policy in effect at its Lock A. Therefore:
+
+**SEER-2026-0001 through SEER-2026-0004 are scored under v1.0.** The forecast-level Brier is the
+governing score for those four forecasts. The forecast card misdescribed the policy; it did not
+create a competing standard.
+
+### Disclosure obligation
+
+The forecast card made a public promise of per-prediction scores. That promise is honored by
+publishing per-prediction Brier figures alongside the governing forecast-level score, explicitly
+labeled supplementary. Publishing additional figures is a disclosure, not a scoring change, and
+nothing in v1.0 forbids it.
+
+For forecasts locked on or after 30 August 2026, per-prediction Brier is a governing metric
+alongside the forecast-level score, and every forecast card must state which scheme governs.
+
+### Open — not resolved by this amendment
+
+v1.0 defines Brier as $(p - o)^2$ with the weighted forecast score serving as a *continuous* outcome
+$o$. Brier is conventionally defined over binary outcomes; substituting a continuous quality score
+produces a number that is not a proper scoring rule in the standard sense and is not comparable to
+Brier scores published elsewhere.
+
+This affects all four forecasts already scored under v1.0. Resolving it requires either re-deriving
+those scores under a corrected definition or documenting the departure prominently wherever the
+scores appear. Flagged 30 August 2026. **Unresolved.**
+
+---
+
+## Version log
+
+| Version | Effective | Change |
+|---|---|---|
+| 1.0 | March 2026 | Initial policy, published before the first live forecast |
+| 1.1 | 30 August 2026 | Adds per-prediction Brier. Records this document's precedence over the Tesla forecast card and confirms SEER-2026-0001 through 0004 remain scored under v1.0. Flags the continuous-outcome substitution in the v1.0 Brier definition as unresolved. |
 
 ---
 
